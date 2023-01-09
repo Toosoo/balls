@@ -23,10 +23,10 @@ let gravityBtn = document.getElementById("gravityBtn");
 function createBall() {
   setInterval(() => {
     if (gravityBtn.classList.contains("gravity-on")) {
-      let ball = Bodies.circle(window.innerWidth - 50, 50, 20, { restitution: 1 });
+let ball = Bodies.circle(window.innerWidth - 50, 50, 20, { restitution: 1 });
       Composite.add(engine.world, [ball]);
     }
-  }, 100);
+  }, 1000);
 }
 createBall();
 gravityBtn.addEventListener("click", () => {
